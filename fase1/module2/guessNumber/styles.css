@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  color: #f1f2f3;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+
+  background: #f1f2f4;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-size: 300%;
+  animation: bg 10s ease-in infinite alternate;
+}
+
+@keyframes bg {
+  to {
+    background-position: right;
+  }
+}
+
+.main {
+  width: 90%;
+  max-width: 500px;
+  margin-inline: auto;
+  box-shadow: 10px 10px 10px #12131420, -10px -10px 10px #23242510;
+  border-radius: 0.5rem;
+  padding-block: 1rem;
+}
+
+.header {
+  /* border: 1px solid red; */
+  margin-block-end: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 4rem;
+  /* border: 2px solid blue; */
+  text-wrap: balance;
+  /* margin-block: 1rem; */
+  color: #f1f2f340;
+  text-shadow: 0 0 1px black;
+  mix-blend-mode: overlay;
+}
+
+.beat {
+  animation: beat 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+
+@keyframes beat {
+  50% {
+    scale: 1.05;
+  }
+
+  70% {
+    scale: 1.1;
+  }
+}
+
+.section {
+  /* border: 1px solid blueviolet; */
+  display: flex;
+  place-content: center;
+
+  & .beat {
+    margin-inline-end: 0.5rem;
+  }
+}
