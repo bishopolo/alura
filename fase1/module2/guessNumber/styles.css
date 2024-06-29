@@ -153,7 +153,7 @@ body {
   height: 100vh;
   border: 3px solid salmon;
   background-color: #23242530;
-  filter: blur(50px);
+  filter: blur(100px);
 }
 
 .circle {
@@ -169,15 +169,15 @@ body {
 .one {
   top: 0;
   left: -5%;
-  animation: scale 15s ease-in-out infinite,
-    move1 15s ease-in-out infinite alternate;
+  animation: scale 20s ease-in-out infinite,
+    move1 20s ease-in-out infinite alternate;
 }
 
 .two {
   bottom: 5%;
   right: -5%;
-  animation: scale 15s 5s ease-in-out infinite,
-    move2 15s ease-in-out infinite alternate;
+  animation: scale 20s 10s ease-in-out infinite,
+    move2 20s ease-in-out infinite alternate;
   background-color: #45a049;
 }
 
