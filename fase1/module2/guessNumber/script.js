@@ -1,54 +1,78 @@
 let numberattemps = 5;
 let maxNumberGuess = 10;
 const $hearts = document.querySelectorAll(".beat");
+const $form = document.querySelector(".form");
+const $information = document.querySelector(".information");
+const $guessBtn = document.querySelector(".guessBtn");
+const $gameBtn = document.querySelector(".gameBtn");
+const $guess = document.querySelector(".numbers");
+const $input = document.querySelector("input");
+const guessedNumbers = [];
+let secretNumber = getRandomNumber();
 
-window.document.addEventListener("DOMContentLoaded", async (e) => {
-  let waiting = await time(1000);
+$form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // console.log(secretNumber);
+  const input = +$input.value;
 
-  let numberUser = +prompt(
-    "Welcome to guess the secret number 🎲🔮 \n  untill what number do you want to guess? by default is untill 10",
-    10
-  );
-  maxNumberGuess = !numberUser ? maxNumberGuess : numberUser;
-  const secretNumber = Math.floor(Math.random() * maxNumberGuess) + 1;
-  //   console.log({ numberUser, maxNumberGuess, secretNumber });
+  if (input === secretNumber) {
+    $information.innerHTML = `Great you guessed the number <span class='secretNumber'>${secretNumber}<span>`;
+    animation();
 
-  while (numberattemps >= 1) {
-    let userNumber = +prompt(
-      `Give me a number between 1 and ${maxNumberGuess}`
-    );
+    let tmpText =
+      guessedNumbers.length > 0 && guessedNumbers.length < maxNumberGuess
+        ? `${guessedNumbers.at(-1)}, `
+        : guessedNumbers.at(-1);
 
-    if (userNumber === secretNumber) {
-      alert(`Great you guessed the number ${secretNumber}`);
-      animation();
-      break;
-    } else if (userNumber >= 1 && userNumber <= maxNumberGuess) {
-      if (userNumber > secretNumber) {
-        alert("the secret number is lower");
-      } else {
-        alert("the secret number is higher");
-      }
+    $guess.textContent += tmpText;
+    $guessBtn.setAttribute("disabled", true);
+    $gameBtn.removeAttribute("disabled");
+  } else if (input >= 1 && input <= maxNumberGuess) {
+    if (input > secretNumber) {
+      $information.textContent = "the secret number is lower";
     } else {
-      alert(
-        `sorry, dude \n the number ${userNumber} is out range, try again!!!`
-      );
+      $information.textContent = "the secret number is higher";
     }
-
-    numberattemps--;
-    $hearts[numberattemps].src = "./images/heart32.png";
-    await time(300);
+  } else {
+    $information.textContent = `sorry, dude \n the number ${input} is out range, try it again!!!`;
   }
+
+  numberattemps--;
+  $hearts[numberattemps].src = "./images/heart32.png";
+
   if (numberattemps === 0) {
-    alert("sorry dude, you do not have more lives, try again");
+    $information.textContent =
+      "sorry dude, you do not have more lives, try it again";
     window.location.reload();
   }
 });
 
-function time(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
+function getRandomNumber() {
+  const secretNumber = Math.floor(Math.random() * maxNumberGuess) + 1;
+
+  if (guessedNumbers.length === maxNumberGuess) {
+    $information.textContent = `hey dude, you guessed all numbers between 1 and 10, refresh the page to play again`;
+  } else if (guessedNumbers.includes(secretNumber)) {
+    return getRandomNumber();
+  } else {
+    guessedNumbers.push(secretNumber);
+    return secretNumber;
+  }
 }
+
+$gameBtn.addEventListener("click", (e) => {
+  $hearts.forEach((element) => (element.src = "./images/heart32color.png"));
+  numberattemps = 5;
+  secretNumber = getRandomNumber();
+  // console.log(secretNumber);
+  $input.value = "";
+  if (!secretNumber) {
+    $guessBtn.setAttribute("disabled", true);
+  } else {
+    $guessBtn.removeAttribute("disabled");
+  }
+  $gameBtn.setAttribute("disabled", true);
+});
 
 function animation() {
   const end = Date.now() + 20 * 500;

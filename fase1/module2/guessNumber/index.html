@@ -13,10 +13,31 @@
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   </head>
   <body>
+    <div class="blurBox">
+      <div class="circle one"></div>
+      <div class="circle two"></div>
+    </div>
+
     <main class="main">
       <header class="header">
         <h1 class="title">Guess the secret number</h1>
       </header>
+
+      <section class="sectionMain">
+        <h2 class="subTitle">Choose a number between 1 and 10</h2>
+        <p class="information"></p>
+        <p class="numbersGuessed">guessed [ <span class="numbers"></span> ]</p>
+        <form class="form">
+          <input type="number" class="input" required min="1" max="10" />
+          <div class="buttons">
+            <button type="submit" class="btn guessBtn">Guess 🔮</button>
+            <button type="button" class="btn gameBtn" disabled>
+              New Game 🎮
+            </button>
+          </div>
+        </form>
+      </section>
+
       <section class="section">
         <img
           src="./images/heart32color.png"

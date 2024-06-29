@@ -1,6 +1,6 @@
 # Oracle ONE + Alura Latam
 
-En este repositorio iré subiendo los ejercicios que se realizan en la primera fase del curso de Oracle One + Alura latam
+En este repositorio iré subiendo los ejercicios que se realizan en la primera fase del curso de Oracle One G7 + Alura latam
 
 |                                                                              curso 💻📚                                                                               |                                 link 🔗🔗                                  |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------: |
