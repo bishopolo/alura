@@ -12,6 +12,11 @@ body {
   line-height: 1.4;
 }
 
+html {
+  scrollbar-color: #232425 #000;
+  scrollbar-width: thin;
+}
+
 .sectionHeader {
   /* border: 1px solid tomato; */
   height: 100vh;
