@@ -12,8 +12,8 @@ body {
   line-height: 1.4;
 }
 
-html {
-  scrollbar-color: #232425 #000;
+* {
+  scrollbar-color: #22d4fd #000;
   scrollbar-width: thin;
 }
 
