@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="bishopolo" />
+    <meta
+      name="description"
+      content="Encrypt and decrypt your messages quickly with my text encryption and decryption app"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/ios/16/expeditedssl.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CLMB Encryptor</title>
+  </head>
+  <body>
+    <main class="app">
+      <h1 class="title">CLMB Encryptor</h1>
+      <div class="wrapper">
+        <textarea
+          class="textArea"
+          id="textArea"
+          required
+          title="only lowercase letters"
+          maxlength="300"
+          minlength="3"
+        ></textarea>
+        <section class="texts">
+          <p class="information">only lowercase letters</p>
+          <p class="lengthText"><span class="length">0</span> / 300</p>
+        </section>
+        <section class="buttons">
+          <button id="encrypt" class="btn encrypt">encrypt</button>
+          <button id="decrypt" class="btn decrypt">decrypt</button>
+        </section>
+      </div>
+      <section class="encryptedCards" id="encryptedCards">
+        <h2 class="subtitle">🔐 encrypted messages</h2>
+        <header class="header" id="header">
+          <p class="tmpText">you do not have encrypted messages 🫤🫤🫤</p>
+        </header>
+        <section class="cards" id="cards"></section>
+      </section>
+    </main>
+
+    <dialog id="dialog" class="dialog">
+      <form method="dialog" class="formDialog">
+        <button class="btnDialog">❌</button>
+      </form>
+    </dialog>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
