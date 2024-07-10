@@ -99,7 +99,8 @@ function isAscii(char) {
   if (
     (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) ||
     char.charCodeAt(0) === 32 ||
-    char.charCodeAt(0) === 10
+    char.charCodeAt(0) === 10 ||
+    char.charCodeAt(0) === 241
   ) {
     return true;
   } else {
