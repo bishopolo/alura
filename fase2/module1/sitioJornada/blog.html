@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script type="module" src="./index.js"></script>
+    <meta
+      name="description"
+      content="Descubre los mejores destinos, planifica tus viajes y vive experiencias únicas con Jornada, tu guía de viajes definitiva. Encuentra inspiración, consejos y todo lo que necesitas para hacer realidad tus sueños de viajar"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/faviconWhite-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/faviconWhite-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+  </head>
+  <body>
+    <jornada-header> </jornada-header>
+    <jornada-hero no-border>
+      <picture slot="img">
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            ./public/images/imgHeroBlog768x620.avif  1x,
+            ./public/images/imgHeroBlog1440x620.avif 2x
+          "
+        />
+
+        <source
+          media="(min-width: 769px)"
+          srcset="
+            ./public/images/imgHeroBlog1440x620.avif 1x,
+            ./public/images/imgHeroBlog1920x620.avif 2x
+          "
+        />
+
+        <img
+          class="absolute inset-0 h-full w-full object-cover -z-10"
+          aria-hidden="true"
+          role="none"
+          src="./public/images/imgHeroBlog1920x620.avif"
+          alt=""
+        />
+      </picture>
+
+      <jornada-title slot="titleHero" position="left">
+        <h2 slot="title" class="text-[48px]">Blog de la Jornada</h2>
+        <span slot="line"></span>
+      </jornada-title>
+      <p slot="subTitle">
+        Historias de viajes de nuestros clientes. ¡Inspírate, encuentra
+        itinerarios y consejos! ¿Cuál es tu próximo destino?
+      </p>
+    </jornada-hero>
+
+    <main class="mt-[88px]">
+      <jornada-title slot="titleHero" >
+        <h2 slot="title">Tokyo</h2>
+        <span slot="line"></span>
+      </jornada-title>
+
+        <section class="maxWidth border-0 border-red-600">
+            <jornada-article image="true">
+              <h2 slot="title">La llegada</h2>
+              <p slot="subTitle">Nuestro viaje comenzó en el Aeropuerto Internacional de Narita, situado a unos 60 km de Tokio. Después de aterrizar y completar todos los trámites de inmigración, fuimos recibidos por el equipo de Jornada Viajes, quienes nos llevaron hasta nuestro hotel.</p>
+              <figure slot="img" class="h-full w-full">
+                <img src="./public/images/articleTokio.avif" alt="" class="h-full w-full object-cover">
+              </figure>
+            </jornada-article> 
+
+            <jornada-article>
+              <h2 slot="title">Acomodaciones</h2>
+              <p slot="subTitle">Nos alojamos en el lujoso Hotel Okura Tokyo, ubicado en el barrio de Toranomon. El hotel cuenta con una vista increíble de la ciudad y ofrece una amplia gama de servicios, que incluyen un spa, una piscina, restaurantes de renombre y un bar lounge. Quedamos encantados con la atención a los detalles y la calidad del servicio.</p>
+            </jornada-article> 
+
+            <figure class=" mb-[48px]">
+              <img src="./public/images/Tokyo2.avif" alt="" class="h-[300px] w-full object-cover">
+              <figcaption class="font-montserrat400 text-sm">
+                ¡Vista de la ciudad desde la ventana del hotel!
+              </figcaption>
+            </figure>
+
+            <jornada-article>
+              <h2 slot="title">Explorando la ciudad</h2>
+              <p slot="subTitle">
+                  Comenzamos nuestro recorrido por la ciudad con una visita al famoso Templo Sensoji, uno de los templos budistas más antiguos e importantes de Japón. Caminamos por la calle comercial Nakamise, donde encontramos muchas tiendas que vendían artículos típicos japoneses, como kimonos, abanicos y comidas tradicionales. 
+Luego, visitamos el icónico cruce de Shibuya, uno de los más transitados del mundo, donde observamos la sincronización de los peatones cruzando la calle. 
+Al día siguiente, visitamos el Parque Ueno, que alberga el Museo Nacional de Tokio, donde pudimos conocer la historia y la cultura japonesa. Por la noche, fuimos a un típico Izakaya, un bar japonés que sirve una gran variedad de platos y bebidas.
+              </p>
+            </jornada-article>
+
+        <jornada-article>
+              <h2 slot="title">Compras</h2>
+              <p slot="subTitle">
+                Tokio es famosa por sus grandes almacenes y centros comerciales, y no podíamos dejar de visitar algunos de ellos. Fuimos al famoso distrito comercial de Ginza, donde encontramos tiendas de las marcas más renombradas del mundo. También visitamos el distrito de Akihabara, conocido como el centro de la electrónica y el entretenimiento de Tokio, donde encontramos diversas tiendas de videojuegos, electrónica y mangas.
+              </p>
+            </jornada-article>
+
+                <jornada-article>
+              <h2 slot="title">Gastronomia</h2>
+              <p slot="subTitle">
+                No se puede hablar de Japón sin mencionar su gastronomía. Tuvimos la oportunidad de probar una gran variedad de platos típicos, como sushi, sashimi, ramen y tempura, además de dulces tradicionales como el mochi.
+              </p>
+            </jornada-article>
+
+
+                <jornada-article>
+              <h2 slot="title">Concluyendo...</h2>
+              <p slot="subTitle">
+                Nuestro viaje a Tokio con la agencia Viajes Jornada fue una experiencia inolvidable. El equipo de la agencia se encargó de todos los detalles, desde la reserva del hotel hasta la elección de los mejores lugares para visitar y comer. Recomendamos Viajes Jornada a todos los que deseen hacer un viaje increíble a Japón.
+              </p>
+            </jornada-article>
+        </section>
+
+    <jornada-title>
+        <h2 slot="title">Quizás tambien te gusten estas publicaciones</h2>
+        <span slot="line"></span>
+      </jornada-title>
+    </main>
+
+        <section
+        class="maxWidth border-0 border-blue-400 min-[1300px]:flex min-[1300px]:gap-5 mb-[88px]"
+      >
+
+      <jornada-blog class="min-[1300px]:w-[384px]">
+          <img
+            src="./public/images/destinoOsaka.jpg"
+            alt=""
+            slot="img"
+            class="h-full object-cover object-center"
+          />
+          <p slot="title">Osaka</p>
+          <p slot="text">
+            Osaka es una ciudad animada y moderna en Japón. La ciudad es famosa
+            por su deliciosa gastronomía y por ser un excelente punto de partida
+            para explorar otras ciudades japonesas cercanas.
+          </p>
+          <jornada-button slot="button"></jornada-button>
+        </jornada-blog>
+
+        <jornada-blog class="border-0 border-purple-950 min-[1300px]:w-[384px]">
+          <img
+            src="./public/images/hiroshima.avif"
+            alt=""
+            slot="img"
+            class="border-0 border-orange-500 h-full object-cover object-center"
+          />
+          <p slot="title">Hiroshima</p>
+          <p slot="text">
+            Ciudad ubicada en el suroeste de Japón, conocida mundialmente por haber sido el objetivo del primer bombardeo atómico de la historia. Hoy en día, la ciudad es un símbolo de paz y reconciliación. Además, Hiroshima también es conocida por su gastronomía.
+          </p>
+          <jornada-button slot="button" ></jornada-button>
+        </jornada-blog>
+
+          <jornada-blog class="border-0 border-purple-950 min-[1300px]:w-[384px]">
+          <img
+            src="./public/images/kyoto.avif"
+            alt=""
+            slot="img"
+            class="border-0 border-orange-500 h-full object-cover object-center"
+          />
+          <p slot="title">Kyoto</p>
+          <p slot="text">
+            Kioto es una ciudad ubicada en el centro de Japón, conocida por ser la antigua capital del país y preservar muchas tradiciones culturales japonesas. Con sus templos históricos, jardines tradicionales y ceremonias de té, es un inmersión en la cultura japonesa.
+          </p>
+          <jornada-button slot="button" ></jornada-button>
+        </jornada-blog>
+
+  
+      </section>
+
+    <footer>
+      <jornada-footer></jornada-footer>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --max-width: 1200px;
+  --height-header: 138px;
+  --height-hero: 620px;
+  --width-title-line: 180px;
+  --height-title-line: 4px;
+  --middle-title-line: 90px;
+  --lg-width-card: 588px;
+  --lg-height-card: 308px;
+  --md-width-card: 312px;
+  --md-height-card: 288px;
+  --lg-width-button: 312px;
+  --md-width-button: 280px;
+  --height-button: 64px;
+  --height-category: 220px;
+  --lg-width-category: 312px;
+  --md-width-category: 280px;
+  --height-blog: 750px;
+  --sm-width-blog: 312px;
+  --md-width-blog: 648px;
+  --lg-width-blog: 588px;
+  --sm-height-img-blog: 360px;
+  --lg-height-img-blog: 452px;
+  --height-img-gallery: 254px;
+  --height-img2-gallery: 182px;
+  --lg-width-img2-gallery: 790px;
+  --lg-width-img-gallery: 380px;
+  --md-width-img-gallery: 312px;
+  --md-width-img2-gallery: 648px;
+  --sm-width-img-gallery: 144px;
+  --sm-width-img2-gallery: 312px;
+  --sm--height-hero: 400px;
+  --md--height-hero: 600px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  max-width: 70ch;
+}
+
+@font-face {
+  font-family: "montserrat400";
+  src: url("../public/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat500";
+  src: url("../public/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat700";
+  src: url("../public/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.navbarMenu {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* :has(.inputMenuIcon:checked) .navbarMenu {
+  transform: translateX(0);
+  opacity: 1;
+} */
+
+.hide {
+  transform: translateX(110%);
+  opacity: 0;
+}
+
+.menuIcon {
+  background-image: linear-gradient(
+    to top,
+    white 0px 4px,
+    transparent 4px 10px,
+    white 10px 14px,
+    transparent 14px 20px,
+    white 20px 24px,
+    transparent 24px
+  );
+}
+
+.maxWidth {
+  @apply w-[90%] mx-auto max-w-1200;
+}
+
+form > div {
+  margin-bottom: 64px;
+  /* border: 1px solid black; */
+  max-width: 100%;
+}
+
+.input {
+  @apply font-montserrat400 p-1;
+}
+
+input:not(input[type="button"]) {
+  border: none;
+  border-bottom: 3px solid #d9d9d9;
+  width: 100%;
+  max-width: 100%;
+  color : black;
+}
+
+textarea{
+  border : 2px solid #d9d9d9;
+  color : black;
+  max-width:100%;
+  width: 100%;
+  height: 90px;
+  border-radius: 8px;
+  max-width: 100%;
+  resize: none;
+  padding : .2rem;
+}
+
+label{
+  color : #8a8888;
+}
+
+
+
+.input:focus,
+textarea:focus{
+  outline: none;
+  border-color: #B81515;
+}

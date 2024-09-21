@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paquetes de viajes</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script type="module" src="./index.js"></script>
+    <meta
+      name="description"
+      content="Descubre los mejores destinos, planifica tus viajes y vive experiencias únicas con Jornada, tu guía de viajes definitiva. Encuentra inspiración, consejos y todo lo que necesitas para hacer realidad tus sueños de viajar"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/faviconWhite-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/faviconWhite-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+  </head>
+  <body>
+    <jornada-header></jornada-header>
+    <jornada-hero>
+      <picture slot="img">
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            ./public/images/imgHeroDestination768x620.avif  1x,
+            ./public/images/imgHeroDestination1440x620.avif 2x
+          "
+        />
+
+        <source
+          media="(min-width: 769px)"
+          srcset="
+            ./public/images/imgHeroDestination1440x620.avif 1x,
+            ./public/images/imgHeroDestination1920x620.avif 2x
+          "
+        />
+
+        <img
+          class="absolute inset-0 h-full w-full object-cover -z-10"
+          aria-hidden="true"
+          role="none"
+          src="./public/images/imgHeroDestination1920x620.avif"
+          alt=""
+        />
+      </picture>
+
+      <jornada-title slot="titleHero" position="left">
+        <h2 slot="title" class="text-[48px]">¡Descubre Japón!</h2>
+        <span slot="line"></span>
+      </jornada-title>
+      <p slot="subTitle">
+        ¡Jornada tiene el paquete perfecto para tu estilo y presupuesto!
+        ¡Descubre los hermosos paisajes y la cultura milenaria de este hermoso
+        país!
+      </p>
+    </jornada-hero>
+
+    <main class="mt-[88px]">
+      <jornada-title>
+        <h2 slot="title">Destinos de la Excursión</h2>
+        <span slot="line"></span>
+      </jornada-title>
+
+      <section
+        class="maxWidth border-0 border-blue-400 min-[1300px]:flex min-[1300px]:gap-4 mb-[88px]"
+      >
+        <jornada-blog class="border-0 border-purple-950">
+          <img
+            src="./public/images/destinoTokio.avif"
+            alt=""
+            slot="img"
+            class="border-0 border-orange-500 h-full object-cover object-center"
+          />
+          <p slot="title">Tokyo</p>
+          <p slot="text">
+            Tokyo es una ciudad vibrante y cosmopolita, con sus templos
+            históricos, museos de arte moderno y rascacielos icónicos. No
+            pierdas la oportunidad de sumergirte en su fascinante atmósfera.
+          </p>
+          <jornada-button slot="button"></jornada-button>
+        </jornada-blog>
+
+        <jornada-blog>
+          <img
+            src="./public/images/destinoOsaka.jpg"
+            alt=""
+            slot="img"
+            class="h-full object-cover object-center"
+          />
+          <p slot="title">Osaka</p>
+          <p slot="text">
+            Osaka es una ciudad animada y moderna en Japón. La ciudad es famosa
+            por su deliciosa gastronomía y por ser un excelente punto de partida
+            para explorar otras ciudades japonesas cercanas.
+          </p>
+          <jornada-button slot="button"></jornada-button>
+        </jornada-blog>
+      </section>
+
+      <jornada-title>
+        <h2 slot="title">Pago</h2>
+        <span slot="line"></span>
+      </jornada-title>
+
+      <section
+        class="border-0 border-orange-600 w-[90%] max-w-1200 mx-auto mb-[88px] min-[1070px]:flex min-[1070px]:gap-2"
+      >
+        <article
+          class="mb-6 min-[1070px]:flex-1 border-0 border-red-500 min-[1070px]:mt-20"
+        >
+          <p class="text-[40px] font-montserrat700 mb-6">$4000</p>
+          <p class="text-[28px] font-montserrat700 mb-6">
+            "¡Pago a plazos de hasta 12 cuotas!"
+          </p>
+          <p class="text-[20px] font-montserrat400">
+            Viaja pagando en hasta 12 cuotas con tarjeta, al contado en crédito
+            con un descuento del 5% ¡o !
+          </p>
+        </article>
+        <jornada-gallery class="min-[1070px]:flex-2">
+          <img
+            src="./public/images/galeryDestination1.avif"
+            alt=""
+            class="w-full h-full object-cover"
+            slot="img1"
+          />
+          <img
+            src="./public/images/galeryDestination2.avif"
+            alt=""
+            class="w-full h-full object-cover"
+            slot="img2"
+          />
+          <img
+            src="./public/images/galeryDestination3.avif"
+            alt=""
+            class="w-full h-full object-cover"
+            slot="img3"
+          />
+        </jornada-gallery>
+      </section>
+
+      <jornada-title>
+        <h2 slot="title">Testimonios</h2>
+        <span slot="line"></span>
+      </jornada-title>
+
+      <section class="maxWidth lg:flex lg:gap-6 mb-[88px]">
+        <jornada-testimony>
+          <p class="text" slot="text">
+            Tuve una experiencia inolvidable. El paquete de Japón me permitió
+            explorar desde templos antiguos hasta ciudades modernas. Y el precio
+            fue accesible, ¡lo recomiendo!
+          </p>
+          <img
+            src="./public/images/avatarJulio.avif"
+            alt="avatar ana"
+            slot="img"
+          />
+          <p slot="name">Javier Martínezi</p>
+        </jornada-testimony>
+        <jornada-testimony>
+          <p class="text" slot="text">
+            Mi viaje a Tokio fue increíble. El itinerario personalizado me
+            permitió hacer mucho en poco tiempo. ¡Superó mis expectativas y ya
+            quiero viajar con Jornada de nuevo!
+          </p>
+          <img
+            src="./public/images/avatarLucia.avif"
+            alt="avatar amari"
+            slot="img"
+          />
+          <p slot="name">María García</p>
+        </jornada-testimony>
+        <jornada-testimony>
+          <p class="text" slot="text">
+            ¡Mi viaje a Osaka fue inolvidable! ¡Jornada organizó todo
+            perfectamente, lo recomiendo sin dudarlo!
+          </p>
+          <img
+            src="./public/images/avatarOlga.avif"
+            alt="avatar lauro"
+            slot="img"
+          />
+          <p slot="name">Ana Rodríguez</p>
+        </jornada-testimony>
+      </section>
+    </main>
+
+    <footer>
+      <jornada-hero-footer>
+        <picture slot="img">
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              ./public/images/imgFooterDestination768x400.avif  1x,
+              ./public/images/imgFooterDestination1440x600.avif 2x
+            "
+          />
+
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              ./public/images/imgFooterDestination1440x600.avif 1x,
+              ./public/images/imgFooterDestination1920x600.avif 2x
+            "
+          />
+
+          <img
+            aria-hidden="true"
+            role="none"
+            src="./public/images/imgFooterDestination1920x600.avif"
+            class="object-cover w-full"
+            alt=""
+          />
+        </picture>
+      </jornada-hero-footer>
+      <jornada-footer></jornada-footer>
+    </footer>
+  </body>
+</html>

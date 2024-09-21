@@ -4,6 +4,20 @@ En este repositorio iré subiendo los ejercicios que se realizan en la primera f
 
 live demo 👉 https://bishopolo.github.io/alura/
 
+> [!NOTE]  
+> La fase 1 ya se terminó, actualmente estoy en la fase 2 que va hasta enero del 2025
+
+## fase 2
+
+|                                                                     curso 💻📚                                                                      |                                   link 🔗🔗                                    |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+| [IA generativa en Front-End: trabajando con semántica y HTML](https://app.aluracursos.com/course/ia-generativa-front-end-trabajando-semantica-html) | [maquetación sitio de viajes Jornada](./fase2/module1/sitioJornada/index.html) |
+|                                                                                                                                                     |                                                                                |
+|                                                                                                                                                     |                                                                                |
+|                                                                                                                                                     |                                                                                |
+
+## fase 1
+
 |                                                                              curso 💻📚                                                                               |                                  link 🔗🔗                                  |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
 | [Lógica de programación: sumérgete en la programación con JavaScript](https://www.aluracursos.com/curso-online-logica-programacion-sumergete-programacion-javascript) | [adivina el número (prompt, alert)](./fase1/module1/guessNumber/index.html) |

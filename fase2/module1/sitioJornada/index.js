@@ -1,0 +1,12 @@
+import "./src/components/Header/JornadaHeader.js";
+import "./src/components/Hero/JornadaHero.js";
+import "./src/components/Title/JornadaTitle.js";
+import "./src/components/Card/JornadaCard.js";
+import "./src/components/Button/JornadaButton.js";
+import "./src/components/Category/JornadaCategory.js";
+import "./src/components/Blog/JornadaBlog.js";
+import "./src/components/Galeria/JornadaGallery.js";
+import "./src/components/Testimony/JornadaTestimony.js";
+import "./src/components/Footer/JornadaHeroFooter.js";
+import "./src/components/Footer/JornadaFooter.js";
+import "./src/components/Article/JornadaArticle.js";

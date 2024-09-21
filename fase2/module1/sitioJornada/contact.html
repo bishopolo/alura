@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script type="module" src="./index.js"></script>
+    <meta
+      name="description"
+      content="Descubre los mejores destinos, planifica tus viajes y vive experiencias únicas con Jornada, tu guía de viajes definitiva. Encuentra inspiración, consejos y todo lo que necesitas para hacer realidad tus sueños de viajar"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/faviconWhite-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/faviconWhite-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+  </head>
+  <body>
+    <jornada-header></jornada-header>
+    <jornada-hero>
+      <picture slot="img">
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            ./public/images/imgHeroContact768x620.avif  1x,
+            ./public/images/imgHeroContact1440x620.avif 2x
+          "
+        />
+
+        <source
+          media="(min-width: 769px)"
+          srcset="
+            ./public/images/imgHeroContact1440x620.avif 1x,
+            ./public/images/imgHeroContact1920x620.avif 2x
+          "
+        />
+
+        <img
+          class="absolute inset-0 h-full w-full object-cover -z-10"
+          aria-hidden="true"
+          role="none"
+          src="./public/images/imgHeroContact1920x620.avif"
+          alt=""
+        />
+      </picture>
+
+      <jornada-title slot="titleHero" position="left">
+        <h2 slot="title" class="text-[48px]">¡Ponte en contacto!</h2>
+        <span slot="line"></span>
+      </jornada-title>
+      <p slot="subTitle">
+        ¿Dudas, sugerencias, problemas por resolver? ¡Tenemos un equipo de
+        guardia para ayudarte!
+      </p>
+    </jornada-hero>
+
+    <main class="mt-[88px]">
+      <jornada-title>
+        <h2 slot="title">Rellena el formulario:</h2>
+        <span slot="line"></span>
+      </jornada-title>
+      <p class="maxWidth text-center text-[20px] font-montserrat400">
+        Tenemos un equipo siempre listo para resolver tus dudas, problemas,
+        ofrecerte consejos y orientaciones objetivas para hacer tu experiencia
+        lo más placentera y tranquila posible. Completa tus datos y te
+        contactaremos según la urgencia de tu solicitud. ¡Puedes confiar en
+        nosotros!
+      </p>
+
+      <section
+        class="mt-[56px] maxWidth border-0 border-red-500 mb-[50px] py-4"
+      >
+        <form
+          action="/"
+          class="border-0 border-black w-[310px] md:w-[648px] lg:w-[790px] mx-auto max-w-full"
+        >
+          <div>
+            <label for="name">
+              <input
+                type="text"
+                placeholder="Nombre..."
+                class="input"
+                autofocus
+              />
+            </label>
+          </div>
+
+          <div class="lg:flex lg:gap-6">
+            <div class="lg:flex-1 mb-[64px] lg:mb-0">
+              <label for="phone">
+                <input type="tel" placeholder="Teléfono..." class="input" />
+              </label>
+            </div>
+
+            <div class="lg:flex-1">
+              <label for="email">
+                <input type="email" placeholder="Correo..." class="input" />
+              </label>
+            </div>
+          </div>
+          <div>
+            <label for="theme">
+              <input type="text" placeholder="Tema..." class="input" />
+            </label>
+          </div>
+
+          <div>
+            <label for="text" class="border-0 border-zinc-950 inline-block mb-3"
+              >Tema</label
+            >
+            <textarea id="text" placeholder="Tema..."> </textarea>
+          </div>
+
+          <div>
+            <input
+              type="button"
+              value="Enviar!"
+              class="bg-button transition-colors hover:bg-hoverButton font-montserrat700 text-[20px] mx-auto block text-white rounded-lg h-[64px] w-[312px] md:w-[280px] cursor-pointer max-w-full"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <jornada-hero-footer>
+        <picture slot="img">
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              ./public/images/imgFooterContact768x400.avif  1x,
+              ./public/images/imgFooterContact1440x600.avif 2x
+            "
+          />
+
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              ./public/images/imgFooterContact1440x600.avif 1x,
+              ./public/images/imgFooterContact1920x600.avif 2x
+            "
+          />
+
+          <img
+            aria-hidden="true"
+            role="none"
+            src="./public/images/imgFooterContact1920x600.avif"
+            class="object-cover w-full"
+            alt=""
+          />
+        </picture>
+      </jornada-hero-footer>
+      <jornada-footer></jornada-footer>
+    </footer>
+  </body>
+</html>
