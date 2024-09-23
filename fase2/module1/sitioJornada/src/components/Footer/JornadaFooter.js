@@ -21,7 +21,7 @@ export class JornadaFooter extends HTMLElement {
         </style>
         <section class='bg-black w-screen  lg:h-[232px] flex'>
             <div class='maxWidth lg:flex lg:justify-between lg:items-center text-white border-0 border-red-600 '>
-                <img src='./public/images/logoFooter.png' class='w-[160px] h-[40px] block mx-auto lg:hidden mt-[32px] mb-4' />
+                <img src='./public/images/logoFooter.png' class='w-[160px] h-[40px] block mx-auto lg:hidden mt-[32px] mb-4' alt='logo jornada'/>
                 <article  class='text-center text-[20px] lg:text-left basis-[60%]'>
                     <p class='font-montserrat400 mb-2'>Horario de atención: 08h - 20h (Lunes a Sábado) </p>
                     <p class='font-montserrat400'>Desarrollado por Alura Latam, maquetado por <a href='https://www.linkedin.com/in/jorge-echeverri-dev/ class='underline decoration-wavy  decoration-slate-50'> bishopolo.</a> Proyecto fictício sin fines comerciales.. </p>

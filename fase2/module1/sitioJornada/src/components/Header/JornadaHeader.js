@@ -39,7 +39,13 @@ export class JornadaHeader extends HTMLElement {
             <figure>
                 <a href='./'>
                 <img src='./public/images/logoJornada.png' alt='logo jornada' class='w-[260px] h-[64px] hidden lg:block ' />
-                <img src='./public/images/simboloLogoJornada.png' alt='logo jornada' class='size-[64px] lg:hidden '/>
+                <img 
+                    src='./public/images/simboloLogoJornada.png' 
+                    alt='logo jornada' 
+                    class='size-[64px] lg:hidden' 
+                    srcset='
+                        ./public/images/simboloLogoJornada.png 1x, 
+                        ./public/images/simboloLogoJornada128x128.png 2x'/>
                 </a>
             </figure>
             <nav class='hidden lg:block'>

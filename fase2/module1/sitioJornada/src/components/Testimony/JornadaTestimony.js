@@ -18,6 +18,10 @@ export class JornadaTestimony extends HTMLElement {
             display : block; 
         }
 
+        img{
+        aspect-ratio : 19/4 
+        }
+
         </style>
 
 
@@ -28,7 +32,7 @@ export class JornadaTestimony extends HTMLElement {
                 <slot name='img' class='rounded-full size-[88px]  '></slot> 
                 <div class='border-0 border-pink-600 w-[176px] flex flex-col justify-center gap-1 ml-6'>
                     <slot name='name' class='font-montserrat700  pl-1'></slot> 
-                    <img src='./public/images/star.webp' alt='calification 5 stars' class='h-[32px]'>
+                    <img src='./public/images/star.webp' alt='calification 5 stars' class=' aspect-[19/4]' width="190" height="40" >
                 </div>
             </footer>
         
