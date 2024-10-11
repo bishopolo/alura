@@ -10,9 +10,9 @@ live demo 👉 https://bishopolo.github.io/alura/
 ## fase 2
 
 |                                                                     curso 💻📚                                                                      |                                   link 🔗🔗                                    |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: | ------------------------------------------------------------------- |
 | [IA generativa en Front-End: trabajando con semántica y HTML](https://app.aluracursos.com/course/ia-generativa-front-end-trabajando-semantica-html) | [maquetación sitio de viajes Jornada](./fase2/module1/sitioJornada/index.html) |
-|                                                                                                                                                     |                                                                                |
+|                     [Practicando Front End: Challenge Portafolio](https://app.aluracursos.com/course/challenge-portafolio-one)                      |                                                                                | [portafolio jorge echeverri](./fase2/module2/portafolio/index.html) |
 |                                                                                                                                                     |                                                                                |
 |                                                                                                                                                     |                                                                                |
 
