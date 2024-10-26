@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --purple: #a855f7;
+  --skyble: #0ea5e9;
+  --amber: #fbbf24;
+  --rose: #fb7185;
+  --emerald: #34d399;
+  --cyan: #0e7490;
+  --red: #be123c;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+html {
+  background-image: var(--bg-color);
+  min-height: 100vh;
+}
+
+[data-focus="easy"] {
+  --bg-color: linear-gradient(180deg, #8b1ff8 0%, #041832 48.44%, #01080e 100%);
+}
+
+[data-focus="medium"] {
+  --bg-color: linear-gradient(180deg, #1875e9 0%, #041832 48.44%, #01080e 100%);
+}
+
+[data-focus="hard"] {
+  --bg-color: linear-gradient(180deg, #0f725c 0%, #041832 48.44%, #01080e 100%);
+}
+
+body {
+  line-height: 1.4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url("https://raw.githubusercontent.com/alura-es-cursos/2049-FokusCurso/refs/heads/aula5/imagenes/pattern.png");
+  background-position: center;
+  /* background-size: cover; */
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  max-width: 70ch;
+}
+
+.btn {
+  font-size: 1.3rem;
+  @apply px-8 py-4 rounded-lg border;
+  transition: scale 0.3s ease;
+}
+
+.active {
+  scale: 0.8;
+}
+
+.btnStart {
+  /* zoom: 4; */
+  text-shadow: 1px 1px color-mix(in srgb, dodgerblue 50%, rebeccapurple 90%),
+    -1px -1px color-mix(in srgb, #34d399 60%, #0e7490 50%);
+  transition: text-shadow 0.5s ease-in-out;
+
+  &:hover {
+    text-shadow: unset;
+  }
+}
+
+.btnRestart,
+.submit {
+  border: 2px solid transparent;
+  background: linear-gradient(#232425, #343536) padding-box,
+    linear-gradient(
+        -45deg,
+        var(--purple),
+        var(--skyble),
+        var(--amber),
+        var(--rose),
+        var(--emerald),
+        var(--cyan),
+        var(--red)
+      )
+      border-box;
+
+  &:hover {
+    animation: move 2s linear infinite;
+  }
+}
+
+@keyframes move {
+  to {
+    background-position-x: -400px;
+  }
+}
+
+.shapes {
+  display: grid;
+  grid-template-areas: "js";
+  justify-content: center;
+  display: none;
+
+  & > * {
+    grid-area: js;
+  }
+}
+
+.shape {
+  width: 300px;
+  height: 300px;
+  animation: turn 10s linear infinite;
+}
+
+@keyframes turn {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.shape1 {
+  border-radius: 60% 40% 65% 35% / 48% 20% 80% 52%;
+  background-image: linear-gradient(
+    180deg,
+    #8b1ff8 0%,
+    #041832 48.44%,
+    #01080e 100%
+  );
+}
+
+.shape2 {
+  background-image: linear-gradient(
+    180deg,
+    #1875e9 0%,
+    #041832 48.44%,
+    #01080e 100%
+  );
+  border-radius: 87% 13% 41% 59% / 48% 66% 34% 52%;
+  animation: turnBack 10s linear infinite;
+}
+
+@keyframes turnBack {
+  to {
+    rotate: -1turn;
+  }
+}
+
+.shape3 {
+  background-image: linear-gradient(
+    180deg,
+    #0f725c 0%,
+    #041832 48.44%,
+    #01080e 100%
+  );
+  border-radius: 21% 79% 77% 23% / 48% 51% 49% 52%;
+  transform: translateZ(80px);
+}

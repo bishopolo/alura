@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-focus="hard">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer ⏳</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <figure class="border-0 max-w-[800px] mx-auto mt-4 mb-8">
+      <img
+        src="https://raw.githubusercontent.com/alura-es-cursos/2049-FokusCurso/refs/heads/aula5/imagenes/logo.png"
+        alt="logo fokus"
+        class="border-0 border-red-500 block object-cover mx-auto"
+      />
+    </figure>
+
+    <main class="mx-auto border-0 max-w-[800px] w-[90%]">
+      <section class="border-0 my-10 md:flex">
+        <h1
+          class="title text-[26px] md:text-[50px] text-balance flex-1 text-center md:text-left"
+        >
+          Optimiza tu productividad,
+          <strong> sumérgete en lo que importa.</strong>
+        </h1>
+        <figure
+          class="border-0 flex-1 border-red-500 size-[422px] mx-auto my-5 max-w-full figure"
+        >
+          <img
+            src="https://raw.githubusercontent.com/alura-es-cursos/2049-FokusCurso/refs/heads/aula5/imagenes/enfoque.png"
+            alt=""
+            class="block object-cover w-full max-w-full img"
+          />
+        </figure>
+        <div class="shapes my-16">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+        </div>
+      </section>
+
+      <div class="flex justify-center gap-5 flex-wrap">
+        <button
+          data-minutes="5"
+          class="bg-gradient-to-r from-sky-500 to-purple-500 btn active"
+          id="easy"
+        >
+          easy
+        </button>
+        <button
+          data-minutes="10"
+          class="bg-gradient-to-r from-amber-400 to-rose-400 btn"
+          id="medium"
+        >
+          medium
+        </button>
+        <button
+          data-minutes="15"
+          class="bg-gradient-to-r from-emerald-400 to-cyan-700 btn"
+          id="hard"
+        >
+          hard
+        </button>
+        <button
+          data-minutes="0"
+          class="bg-gradient-to-r from-red-400 to-rose-700 btn"
+          id="free"
+        >
+          free
+        </button>
+      </div>
+
+      <section class="border-0 freeTimer my-5 justify-center hidden">
+        <form class="form">
+          <input
+            type="number"
+            min="1"
+            max="59"
+            maxlength="2"
+            class="rounded-md bg-transparent border px-1 input"
+            placeholder="20"
+            required
+          />
+          <button type="submit" class="submit ml-4 px-4 py-2 rounded-lg">
+            set timer
+          </button>
+        </form>
+      </section>
+
+      <div class="mb-5">
+        <time id="time" class="text-center border-0 mx-auto my-5 text-2xl block"
+          >99:00</time
+        >
+        <div>
+          <button
+            class="mx-auto block my-5 btnStart border rounded-lg px-6 py-3"
+          >
+            start
+          </button>
+          <button class="btnRestart block mx-auto border px-4 py-2 rounded-lg">
+            restart
+          </button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
