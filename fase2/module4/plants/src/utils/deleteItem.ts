@@ -12,5 +12,5 @@ export function deleteItem(id: string) {
 
   cleanScreen(ul);
   showData(ul, newPlantsArray);
-  console.log(id, newPlantsArray);
+  // console.log(id, newPlantsArray);
 }

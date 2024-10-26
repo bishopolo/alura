@@ -24,5 +24,5 @@ export function createPost(
   cleanScreen(ul);
   showData(ul, plantsArray);
 
-  console.log(plantsArray);
+  // console.log(plantsArray);
 }

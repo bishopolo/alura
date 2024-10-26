@@ -136,7 +136,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   searchForm!.addEventListener("submit", (e) => {
     e.preventDefault();
-    const searchValue = id("search").value.trim();
+    const searchValue = id("search").value.toLowerCase().trim();
     const newPlants = plantsArray.filter((plant) =>
       plant.name.toLowerCase().includes(searchValue)
     );
@@ -147,8 +147,12 @@ window.addEventListener("DOMContentLoaded", () => {
     } else {
       alert(`sorry, we do not have plants called ${searchValue} 😔😔😔`);
     }
-    console.log(searchValue, newPlants);
+    // console.log(searchValue, newPlants);
   });
 
   // console.log(localStorage.getItem("plants"));
 });
+
+console.log(
+  "%c ⛔️⛔️⛔️ No hay nada que ver por acá ⛔️⛔️⛔️",
+  "background-color:#232425; color : #bada55; font-size:30px");
