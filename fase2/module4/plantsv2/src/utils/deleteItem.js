@@ -1,5 +1,5 @@
 import { showData } from "./showData.js";
-import { cleanScreen } from "./cleanScreen";
+import { cleanScreen } from "./cleanScreen.js";
 export async function deleteItem(id) {
   const ul = document.querySelector(".ul");
 
