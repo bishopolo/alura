@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", serif;
+  /* font-family: "Raleway", serif; */
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+  scroll-margin-top: 60px;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+body {
+  line-height: 1.5;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, */
+  /* Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  background-image: linear-gradient(150deg, #658292, #81929d, #a09586);
+  background-repeat: no-repeat;
+  min-height: 100dvh;
+  overscroll-behavior: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  max-width: 70ch;
+}
+
+.wrapper {
+  /* border: 1px solid; */
+  max-width: 1200px;
+  width: 90%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* backdrop-filter: blur(10px); */
+}
+
+.navbar a {
+  transition: all 0.5s ease-in;
+  /* border: 2px solid red; */
+}
+
+.navbar {
+  height: fit-content;
+  position: fixed;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+@media screen and (min-width: 830px) {
+  .navbar {
+    position: static;
+    transform: translateX(0);
+  }
+}
+
+.navbar > ul:has(:hover) :not(:hover) {
+  a {
+    opacity: 0.5;
+    filter: blur(0.8px);
+  }
+}
+
+.poster {
+  /* border: 2px solid blue; */
+  width: 0px;
+  flex-grow: 1;
+  display: flex;
+  transition: all 0.5s ease;
+  opacity: 0.8;
+  filter: grayscale(50%);
+}
+
+.poster img {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.poster:hover {
+  width: 200px;
+  filter: grayscale(0) saturate(105%);
+}
+
+.card {
+  transition: all 0.5s cubic-bezier(0.47, -1.33, 0.31, 1.79);
+
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+.heart {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-image: url("https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  filter: drop-shadow(2px 2px 3px #00000040);
+}
+
+.heart:hover {
+  background-position: right;
+}
+
+.liked {
+  background-position: right;
+}
+
+.animation {
+  animation: fill 0.8s steps(28);
+}
+
+@keyframes fill {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.pulse {
+  background: rgb(220, 0, 0);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  box-shadow: 0 0 0 0 rgba(240, 0, 0, 1);
+  animation: pulse 2s infinite;
+  /* border: 1px solid; */
+  position: absolute;
+  left: 4px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(240, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(240, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(240, 0, 0, 0);
+  }
+}
+
+.shape1 {
+  border-radius: 82% 18% 70% 30% / 70% 76% 24% 30%;
+  animation: rotate1 10s linear infinite alternate;
+}
+
+.shape2 {
+  border-radius: 19% 81% 61% 39% / 31% 27% 73% 69%;
+  animation: rotate2 10s linear infinite alternate;
+}
+
+@keyframes rotate1 {
+  to {
+    border-radius: 27% 73% 43% 57% / 81% 42% 58% 19%;
+  }
+}
+@keyframes rotate2 {
+  to {
+    border-radius: 59% 41% 61% 39% / 75% 72% 28% 25%;
+  }
+}
